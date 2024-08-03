@@ -1,0 +1,35 @@
+$button-filter: brightness(95%);
+
+.swipe_deck {
+    display: flex;
+    height: 90vh;
+    padding-top: 60px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .swipe_deck_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33vw;
+        height: 85vh;
+        margin: 0 auto;
+        padding: 10px 10px;
+        border: none;
+        border-radius: 20px;
+
+        &:hover {
+            filter: $button-filter;
+        }
+    }
+}
+
+.no_more_profiles {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+}

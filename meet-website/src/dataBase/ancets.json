@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Сом",
+        "age": 48,
+        "gender": 1,
+        "bio": "=СТРУЯЧИМ=",
+        "photos": ["/pics/simonov1.jpg", "/pics/simonov2.jpg", "/pics/simonov3.jpg"]
+    },
+    {
+        "id": 2,
+        "name": "Ванятка",
+        "age": 40,
+        "gender": 1,
+        "bio": "у меня есть царь пк и тряпки",
+        "photos": ["/pics/vanomas1.jpg"]
+    }
+]
