@@ -33,56 +33,57 @@ const ProfileEditorPage: React.FC = () => {
         <div className={styles.main_box}>
             <Header />
             <div className={styles.profile_editor}>
-                <h1>Edit Profile</h1>
                 <form className={styles.form}>
-                    <Input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                    />
-                    <Input
-                        type="text"
-                        name="email"
-                        placeholder="Email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                    />
-                    <Input
-                        type="text"
-                        name="birthDate"
-                        placeholder="Birth Date"
-                        value={formData.birthDate}
-                        onChange={handleInputChange}
-                    />
-                    <Input
-                        type="text"
-                        name="gender"
-                        placeholder="Gender"
-                        value={formData.gender}
-                        onChange={handleInputChange}
-                    />
-                    <Input
-                        type="text"
-                        name="location"
-                        placeholder="Location"
-                        value={formData.location}
-                        onChange={handleInputChange}
-                    />
                     <div className={styles.photo_upload}>
-                        <label>
-                            Add Photos:
-                            <input type="file" multiple onChange={handlePhotoUpload} />
-                        </label>
                         <div className={styles.photos}>
                             {photos.map((photo, index) => (
                                 <div key={index} className={styles.photo}>
                                     <img src={photo} alt={`Uploaded ${index}`} />
-                                    <button type="button" onClick={() => handlePhotoDelete(index)}>Delete</button>
+                                    <button type="button" onClick={() => handlePhotoDelete(index)}>&times;</button>
                                 </div>
                             ))}
+                            <label htmlFor="upload" className={styles.add_photo}>
+                                    <span>+</span>
+                                <input id="upload" type="file" multiple onChange={handlePhotoUpload} />
+                            </label>
                         </div>
+                    </div>
+                    <div className={styles.text_info}>
+                        <Input
+                            type="text"
+                            name="name"
+                            placeholder="Name"
+                            value={formData.name}
+                            onChange={handleInputChange}
+                        />
+                        <Input
+                            type="text"
+                            name="email"
+                            placeholder="Email"
+                            value={formData.email}
+                            onChange={handleInputChange}
+                        />
+                        <Input
+                            type="text"
+                            name="birthDate"
+                            placeholder="Birth Date"
+                            value={formData.birthDate}
+                            onChange={handleInputChange}
+                        />
+                        <Input
+                            type="text"
+                            name="gender"
+                            placeholder="Gender"
+                            value={formData.gender}
+                            onChange={handleInputChange}
+                        />
+                        <Input
+                            type="text"
+                            name="location"
+                            placeholder="Location"
+                            value={formData.location}
+                            onChange={handleInputChange}
+                        />
                     </div>
                 </form>
             </div>
