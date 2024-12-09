@@ -17,11 +17,12 @@ const Input: React.FC<InputProps> = ({ type, name, placeholder, value, onChange 
   };
 
   const inputType = type === 'password' && isPasswordVisible ? 'text' : type;
+  const inputClass = type === 'password' ? `${styles.input} ${styles.input_with_toggle}` : styles.input;
 
   return (
     <div className={styles.input_container}>
       <input
-        className={styles.input}
+        className={inputClass}
         type={inputType}
         name={name}
         placeholder={placeholder}

@@ -5,7 +5,7 @@ import SignInPage from './pages/signIn'
 import SignUpPage from './pages/signUp'
 import ProfileEditorPage from './pages/profileEditor'
 import PeopleChoisePage from './pages/peopleChoise'
-import MessengerPage from './pages/messenger'
+import MatchPage from './pages/match'
 const App: React.FC = () => {
   return (
     <Router>
@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/my-profile" element={<ProfileEditorPage />} />
         <Route path="/people-choice" element={<PeopleChoisePage />} />
-        <Route path="/messenger" element={<MessengerPage />} />
+        <Route path="/match" element={<MatchPage />} />
       </Routes>
     </Router>
   )

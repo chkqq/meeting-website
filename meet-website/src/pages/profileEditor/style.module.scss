@@ -27,9 +27,85 @@
             flex-direction: column;
             min-width: 550px;
             gap: 10px;
+            .gender_selection {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                .gender_button {
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    font-size: 15px;
+                    background-color: #ffffff;
+                    border: 2px solid #ccc;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                
+                    &:hover {
+                        border-color: #888;
+                        background-color: #f9f9f9;
+                    }
+                }
+                
+                .gender_button.active {
+                    border-color: #333;
+                    background-color: #333;
+                    color: #fff;
+                }
+                
+                .gender_button:focus {
+                    outline: none;
+                }
+            }
+            
+            
+            .form_grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+                margin-top: 16px; 
+            }
+            .textarea {
+                width: 96.15%;
+                height: 150px;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                resize: none; 
+            }
         }
     }
-
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    
+        .tooltip_text {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            border-radius: 5px;
+    
+            /* Позиционирование */
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Смещение вверх */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    
+        &:hover .tooltip_text {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    
     .photo_upload {
         margin-top: 20px;
         min-width: 620px;
@@ -53,12 +129,12 @@
                 }
 
                 button {
-                    font-size: 20px;
+                    font-size: 30px;
                     position: absolute;
-                    top: 5px;
-                    right: 5px;
+                    top: 2.5px;
+                    right: 10px;
                     background: none;
-                    color: #333;
+                    color: #fff;
                     border: none;
                     border-radius: 50%;
                     cursor: pointer;

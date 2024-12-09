@@ -1,14 +1,12 @@
 import styles from './style.module.scss'
 import Header from '../../widjets/header'
-import ChatsTape from '../../widjets/ChatsTape'
-const MessengerPage: React.FC = () => {
+const MatchPage: React.FC = () => {
     return (
         <div>
             <Header />
-            <ChatsTape />
         </div>
     )
 
 }
 
-export default MessengerPage;
+export default MatchPage;
